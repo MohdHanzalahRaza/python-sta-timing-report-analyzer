@@ -1,0 +1,7 @@
+path_name,startpoint,endpoint,slack_ns
+path_1,reg_a,reg_b,0.25
+path_2,reg_c,reg_d,-0.14
+path_3,reg_e,reg_f,0.10
+path_4,reg_g,reg_h,-0.05
+path_5,reg_i,reg_j,-0.22
+path_6,reg_k,reg_l,0.08

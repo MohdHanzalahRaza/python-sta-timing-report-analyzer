@@ -1,0 +1,48 @@
+****************************************
+Report : timing
+Design : npu_core
+Version: S1.0
+Date   : 2026-08-23
+****************************************
+
+Startpoint: u_ctrl/state_reg/Q (rising edge-triggered flip-flop)
+Endpoint  : u_mac/op_a/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (MET)                                         0.18
+
+Startpoint: u_buf/bank0/Q (rising edge-triggered flip-flop)
+Endpoint  : u_mac/op_b/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (VIOLATED)                                   -0.09
+
+Startpoint: u_mac/accum/Q (rising edge-triggered flip-flop)
+Endpoint  : u_act/relu_in/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (MET)                                         0.05
+
+Startpoint: u_dma/desc/Q (rising edge-triggered flip-flop)
+Endpoint  : u_buf/wr_port/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (VIOLATED)                                   -0.21
+
+Startpoint: u_act/out_q/Q (rising edge-triggered flip-flop)
+Endpoint  : u_ctrl/status/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (MET)                                         0.33
+
+Startpoint: u_mac/pipe2/Q (rising edge-triggered flip-flop)
+Endpoint  : u_mac/pipe3/D (rising edge-triggered flip-flop)
+Path Group: clk_npu
+Path Type : max
+
+slack (VIOLATED)                                   -0.03
